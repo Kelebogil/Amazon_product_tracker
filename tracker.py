@@ -49,10 +49,8 @@ def sendemail(ans, product):
      
     # creates SMTP session 
     s = smtplib.SMTP('smtp.gmail.com', 587) 
-     
     # start TLS for security 
     s.starttls() 
-  
     # Authentication 
     s.login(GMAIL_USERNAME, GMAIL_PASSWORD) 
 
@@ -68,10 +66,10 @@ def sendemail(ans, product):
     s.quit() 
  
 def ReadAsin():
-    # Asin Id is the product Id which 
+# Asin Id is the product Id which 
    # needs to be provided by the user
     Asin = 'B077PWK5BT'
-    url = "http://www.amazon.in/dp/" + Asin
+    url = "https://www.amazon.co.za/dp/" + Asin
     print ("Processing: "+url)
     ans = check(url)
     arr = [
